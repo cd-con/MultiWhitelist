@@ -1,0 +1,68 @@
+# Please do not change that value
+config-version: 0
+# Plugin prefix
+prefix: "&l[&r&6MultiWhitelist&r§l]&r"
+# Plugin disabled by default - for configuration
+enabled: false
+anti-bot:
+  # Experimental feature. Kick bots for most popular stress-testers with no whitelist check
+  enabled: false
+  #
+  # Name pattern protection
+  #
+  # Kicks all players which includes this pattern
+  #
+  bot-name-pattern:
+    - MCSTORM_IO
+    - BOT
+
+  #
+  # Geoip protection
+  #
+  # Kicks all bots from denied countries
+  #
+
+  # Methods: none - disable ip geolocation; ipgeo-api - enable ipgeolocation.io api;
+  # abs-api - abstractapi.com; db - use local database
+  # Benefits of API - less disk space usage
+  # Benefits of DB - fast as fu..
+  geo-ip-method: "none"
+  # Needed only for API methods
+  api-key: "=AAbbCCddEE12345"
+  # Needed only for database methods
+  db-path: "database.db"
+
+  # Use asterisk to enable 'All, but...'
+  allowed-countries:
+    - UK
+  # Use asterisk to enable 'Nobody, but...'
+  disallowed-countries:
+    - CN
+  #
+  # IP limiter
+  #
+  # Limits connection per IP addres
+  # -1 to disable
+  #
+  players-per-ip-limit: 2
+
+# TODO Make locale files
+locale:
+  universal-whitelist-message: "You don't belongs to any group in the whitelist."
+  shield-state-activated: "&2Bot shield activated!"
+  shield-state-deactivated: "&cBot shield deactivated!"
+  group-whitelist-enabled: "&2Group was enabled! Now players from that group can join server."
+  group-whitelist-disabled: "&cGroup was disabled! Players from that group no longer can join server."
+  mw-reloaded: "&2Config reloaded!"
+  mw-updated: "&2Value updated!"
+  message-for-bot: "You were banned due to bot actions. Contact with server administrator if this was wrong."
+# Some statistic. Just for fun.
+stats:
+  players-joined-ever: 0
+  players-blocked-by-whitelist: 0
+  players-blocked-by-bot-filter: 0
+groups:
+  myGroup:
+    enabled: true
+    whitelist-file: "/groups/myGroup.txt"
+    whitelist-message: "Your group is disabled right now. Come back later."

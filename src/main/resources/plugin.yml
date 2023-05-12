@@ -1,0 +1,20 @@
+name: MultiWhitelist
+version: '${version}'
+main: org.github.cdcon.multiwhitelist.MultiWhitelist
+api-version: 1.16
+commands:
+  mwreload:
+    usage: /mwreload
+    description: Reload plugin
+    permission: mw.admin.reload
+  botshield:
+    usage: /botshield
+    description: Activate/deactivate bot protection
+    permission: mw.admin.shield.state
+  whitelistgroup:
+    usage: /whitelistgroup
+    description: Allow/disallow group to join server
+    permission: mw.admin.groups
+  mwstats:
+    usage: /mwstats
+    description: Show plugin stats.
